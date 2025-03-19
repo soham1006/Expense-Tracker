@@ -1,0 +1,145 @@
+/* Global Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.container {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh; /* Prevent it from overflowing off the screen */
+  padding: 20px;
+  text-align: center;
+  overflow: hidden; /* To hide any overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e3c72;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3c72;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #2a5298;
+}
+
+/* Expense Summary */
+.summary {
+  background: #f4f4f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Expense List Container */
+.expense-list-container, .user-summary-container {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 35%; /* Adjust height to make it fit better */
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #1e3c72;
+}
+
+/* Expense List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+/* Scrollbars (Optional, for a cleaner look) */
+.expense-list-container::-webkit-scrollbar,
+.user-summary-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.expense-list-container::-webkit-scrollbar-thumb,
+.user-summary-container::-webkit-scrollbar-thumb {
+  background: #1e3c72;
+  border-radius: 5px;
+}
+
+.expense-list-container::-webkit-scrollbar-track,
+.user-summary-container::-webkit-scrollbar-track {
+  background: #f4f4f9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
+  }
+
+  .expense-list-container, .user-summary-container {
+    max-height: 40%; /* Slightly larger for smaller screens */
+  }
+}
